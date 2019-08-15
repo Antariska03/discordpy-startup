@@ -61,6 +61,19 @@ async def team(ctx, count):
     
     msg = await ctx.send(embed=embed_body)
 
+@client.command()
+async def count(ctx):
+    
+    channel = ctx.author.voice.channel
+    l=[]
+    for member in channel.members:
+        l.append(member.name)
+    
+    n = len(l)
+    
+    embed_body = discord.Embed(title=f"{channel.name} には {n} 人参加しています", colour=0x00a381) 
+    
+    msg = await ctx.send(embed=embed_body)
     
 # run the bot    
 client.run(token)

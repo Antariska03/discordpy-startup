@@ -53,7 +53,7 @@ async def team(ctx, count):
             ul = []
             for u in group:
                 ul.append(l[u])
-            name = f"チーム {i+1}: {len(group)}人\n"
+            name = f"チーム {i+1}: {len(group)} 人\n"
             value = "\n".join(ul)
             embed_body.add_field(name=name, value=value, inline=True)
     

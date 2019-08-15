@@ -71,7 +71,7 @@ async def count(ctx):
     
     n = len(l)
     
-    embed_body = discord.Embed(title=f"{channel.name} には {n} 人参加しています", colour=0x00a381) 
+    embed_body = discord.Embed(title=f"{channel.name} には {n} 人 参加しています", colour=0x00a381) 
     
     msg = await ctx.send(embed=embed_body)
     

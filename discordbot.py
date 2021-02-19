@@ -5,6 +5,8 @@ from itertools import accumulate
 import os
 import traceback
 
+import nest_asyncio
+nest_asyncio.apply()
 
 client = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']

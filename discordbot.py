@@ -65,11 +65,11 @@ async def team(ctx, count):
 async def count(ctx):
     
     channel = ctx.author.voice.channel
-    l = []
-    for member in channel.members:
-        l.append(member.name)
+#    l = []
+#    for member in channel.members:
+#        l.append(member.name)
     
-    n = len(l)
+    n = len(channel.members)
     
     embed_body = discord.Embed(title=f"{channel.name} には {n} 人 参加しています", colour=0x00a381) 
     

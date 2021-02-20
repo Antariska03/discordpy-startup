@@ -64,14 +64,14 @@ async def team(ctx, count):
 @client.command()
 async def count(ctx):
     
-#    channel = ctx.author.voice.channel
-#    l = []
-#    for member in channel.voice_states:
-#        l.append(member.name)
+    channel = ctx.author.voice.channel
+    l = []
+    for member in channel.members:
+        l.append(member.name)
     
-    n = len(channel.voice_states)
+    n = len(l)
     
-    embed_body = discord.Embed(title=f"{channel.name} には {n} 人 参加しています", description=f"{channel} ★ {channel.voice_states} ★ {channel.members} ★ {discord.__version__}", colour=0x00a381) 
+    embed_body = discord.Embed(title=f"{channel.name} には {n} 人 参加しています", colour=0x00a381) 
     
     msg = await ctx.send(embed=embed_body)
     

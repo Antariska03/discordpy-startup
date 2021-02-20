@@ -27,7 +27,7 @@ async def team(ctx, count):
     count = int(count)
     
     channel = ctx.author.voice.channel
-    l=[]
+    l = []
     for member in channel.members:
         l.append(member.name)
     
@@ -65,7 +65,7 @@ async def team(ctx, count):
 async def count(ctx):
     
     channel = ctx.author.voice.channel
-    l=[]
+    l = []
     for member in channel.members:
         l.append(member.name)
     

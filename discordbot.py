@@ -64,7 +64,7 @@ async def team(ctx, count):
 @client.command()
 async def count(ctx):
     
-    channel = ctx.author.voice.channel
+    channel = ctx.author.voicechannel
     l = []
     for member in channel.members:
         l.append(member.name)
